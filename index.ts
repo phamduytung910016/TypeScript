@@ -89,18 +89,18 @@ printId(true);
 
 
 //Interfaces
-interface Point {
-    x: number;
-    y: number;
+// interface Point {
+//     x: number;
+//     y: number;
 
-}
+// }
 
-function printCoord(pt: Point) {
-    console.log("The coordinate's x value is " + pt.x);
-    console.log("The coordinate's y value is " + pt.y);
-}
+// function printCoord(pt: Point) {
+//     console.log("The coordinate's x value is " + pt.x);
+//     console.log("The coordinate's y value is " + pt.y);
+// }
 
-printCoord({ x: 100, y: 100 });
+// printCoord({ x: 100, y: 100 });
 //Điểm khác nhau giữa type và interface rằng :
 /**
  * type không thể được mở lại để thêm thuộc tính mới 
@@ -115,13 +115,13 @@ printCoord({ x: 100, y: 100 });
 //     honey: boolean
 // }
 
-type Animal = {
-    name: string
-}
+// type Animal = {
+//     name: string
+// }
 
-type Bear = Animal & {
-    honey: boolean
-}
+// type Bear = Animal & {
+//     honey: boolean
+// }
 
 
 
