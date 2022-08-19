@@ -86,24 +86,48 @@ d.woof(3);
 
 
 
-class Base {
-    greet() {
-        console.log("Hello, world!");
-    }
-}
+// class Base {
+//     greet() {
+//         console.log("Hello, world!");
+//     }
+// }
 
-class Derived extends Base {
-    greet(name?: string) {
-        if (name === undefined) {
-            super.greet();
-        } else {
-            console.log(`Hello, ${name.toUpperCase()}`);
-        }
-    }
-}
+// class Derived extends Base {
+//     greet(name?: string) {
+//         if (name === undefined) {
+//             super.greet();
+//         } else {
+//             console.log(`Hello, ${name.toUpperCase()}`);
+//         }
+//     }
+// }
 
-const db = new Derived();
-db.greet();
-db.greet("reader");
+
+//phạm vi truy cập
+
+
+
+// const db = new Derived();
+// db.greet();
+// db.greet("reader");
 const pt = new Supper();
 console.log(pt.x, pt.y);
+
+
+class Base {
+    private x = 0;
+    get getX() {
+        return this.x;
+    }
+}
+
+const b = new Base();
+console.log(b.getX);
+
+class Derived extends Base {
+    showX() {
+        // Can't access in subclasses
+        console.log(this.getX);
+    }
+}
+
