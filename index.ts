@@ -19,19 +19,24 @@ const word = "world!";
 let isDone: boolean = false;
 let decimal: number = 6;
 //const word = [0, 1, 2];
-let obj: any = { x: 0 };
+//mảng let tên_mảng : kiểu_dữ liệu[] = [item1, item2]
+let my_arr = [1, 2, "Vy"];
+my_arr.forEach((a) => { console.log(a) });
+let obj: any = { x: 0, y: 2 };
 // obj.foo();
-obj();
+//let my_arr : number[] = {1, 2, 3, 4, 5};
 obj.bar = 100;
 obj = "helo";
 const n: number = obj;
+console.log(typeof (n));
 
 //hàm
 
+//định nghĩa kiểu truyền vào 
 function greet(name: string) {
     console.log("Hello, " + name.toUpperCase() + "!");
 };
-
+//định nghĩa kiểu dữ liệu trả về
 function getFavariteNumber(): number {
     return 26;
 }
@@ -56,7 +61,7 @@ names.forEach((s) => {
 //sử dụng toán tử ? sau tên biến
 function printName(obj: { first: string, last?: string }) {
     console.log("The firstName is " + obj.first);
-    console.log("The lastName is " + obj.last);
+    console.log("The lastName is " + obj.last?.toUpperCase());
 }
 
 printName({ first: "Bob" });
@@ -86,8 +91,12 @@ printId(true);
 
 // printCoord({ x: 100, y: 100 });
 
+// type ID = string | number;
+// let id : ID = 10;
+// console.log(id);
 
 
+//An interface declaration is another way to name an object type
 //Interfaces
 // interface Point {
 //     x: number;
@@ -136,10 +145,17 @@ interface Window {
 
 const src = 'const a = "Hello World"';
 
+
+// const myCanvas = <HTMLCanvasElement>document.getElementById("hello");
+// console.log(myCanvas);
+
+//những giá trị trong aligment là những giá trị có thể chấp nhận
 function printText(s: string, alignment: "left" | "right" | "center") {
     // ...
 }
 printText("Hello, world", "left");
+
+
 
 function compare(a: string, b: string): -1 | 0 | 1 {
     return a === b ? 0 : a > b ? 1 : -1;
@@ -202,9 +218,9 @@ function map<Input, Output>(arr: Input[], func: (arg: Input) => Output): Output[
     return arr.map(func);
 }
 
-function add(a: string) : any {
+function add(a: string): any {
     return a + 1;
-}  
+}
 const parsed = map(["1", "2", "3"], (n) => parseInt(n));
 
 
