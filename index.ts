@@ -227,6 +227,9 @@ const parsed = map(["1", "2", "3"], (n) => parseInt(n));
 
 document.body.textContent = sayHello(word);
 
+let codeName = "A599-Sheet1";
+console.log(codeName.slice(0,-7));
+
 
 
 
